@@ -1,0 +1,589 @@
+Last login: Wed Feb 17 01:16:50 on ttys000
+MacBook-Pro-de-NOUREDDINE-4:~ noureddine$ pwd
+/Users/noureddine
+MacBook-Pro-de-NOUREDDINE-4:~ noureddine$ cd Desktop 
+MacBook-Pro-de-NOUREDDINE-4:Desktop noureddine$ cd learn_git_again
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ ls
+third.rtf
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git commit -m "adding third.rtf"
+[master e398042] adding third.rtf
+ Committer: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 7 insertions(+)
+ create mode 100644 .DS_Store
+ delete mode 100644 fourth.pages
+ delete mode 100644 third.pages
+ create mode 100644 third.rtf
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git log
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init 
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git add .
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git commit "adding fourth.rtf"
+error: pathspec 'adding fourth.rtf' did not match any file(s) known to git.
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ ls
+fourth.rtf	third.rtf
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git add .
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git commit -m "adding fourth.rtf"
+[master c6cc8c6] adding fourth.rtf
+ Committer: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 7 insertions(+)
+ create mode 100644 fourth.rtf
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git rm --cached third.rtf
+rm 'third.rtf'
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git add .
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git commit -m "removing third.rtf"
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git log
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git log
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init 
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git add .
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git rm --cached third.rtf
+rm 'third.rtf'
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ ls
+fourth.rtf	third.rtf
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git rm --cached third.rtf
+fatal: pathspec 'third.rtf' did not match any files
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git add .
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git commit -m 'removing third.rtf'
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git log
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git rm --cached third
+fatal: pathspec 'third' did not match any files
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git rm --cached third.rtf
+rm 'third.rtf'
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    third.rtf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	third.rtf
+
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git add .
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git commit -m "removing third.rtf"
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git log
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git rm --cached learn_git_again
+fatal: pathspec 'learn_git_again' did not match any files
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git rm --cached third.rtf
+rm 'third.rtf'
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    third.rtf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	third.rtf
+
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git add third.rtf
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git commit -m "removing third.rtf"
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git log
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git rm third.rtf
+rm 'third.rtf'
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git add .
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git commit -m "removing third.rtf"
+[master 28fa68c] removing third.rtf
+ Committer: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 7 deletions(-)
+ delete mode 100644 third.rtf
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git log
+commit 28fa68c2144c9030ae7fcb10e1d37ec215db9f97
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:30:10 2021 +0100
+
+    removing third.rtf
+
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+...skipping...
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Left  one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Right one half screen width (or N positions).
+  F                    Forward forever; like "tail -f".
+...skipping...
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  q  :q  Q  :Q  ZZ     Exit.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Left  one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Right one half screen width (or N positions).
+  F                    Forward forever; like "tail -f".
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &pattern          *  Display only matching lines
+        ---------------------------------------------------
+        A search pattern may be preceded by one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+        ^R       Don't use REGULAR EXPRESSIONS.
+ ---------------------------------------------------------------------------
+
+                           JUMPING
+
+  g  <  ESC-<       *  Go to first line in file (or line N).
+  G  >  ESC->       *  Go to last line in file (or line N).
+
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Left  one half screen width (or N positions).
+HELP -- Press RETURN for more, or q when done...skipping...
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git init
+Reinitialized existing Git repository in /Users/noureddine/Desktop/learn_git_again/.git/
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git log
+commit 28fa68c2144c9030ae7fcb10e1d37ec215db9f97
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:30:10 2021 +0100
+
+    removing third.rtf
+
+commit c6cc8c600b850a98c2e27d89d67d592a3f5cfc46
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:20:39 2021 +0100
+
+    adding fourth.rtf
+
+commit e398042f8154eda2ddc38bcb8d16d8f45f1eaae5
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:19:03 2021 +0100
+
+    adding third.rtf
+
+commit ffce668b985bfc24021fb94094cad29265279cc1
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:02:41 2021 +0100
+
+    adding fourth
+
+commit 66fb1e4a1fb8d3d2d41361b2f1c7a5a68fc55119
+Author: NOUREDDINE <noureddine@MacBook-Pro-de-NOUREDDINE-4.local>
+Date:   Wed Feb 17 01:01:10 2021 +0100
+
+    adding third
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git config --global user.name "Nordin-Mekada"
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git config --global core.editor emacs
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+MacBook-Pro-de-NOUREDDINE-4:learn_git_again noureddine$ 
